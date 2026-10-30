@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101725">
+  <meta name="description" content="An evidence-informed interactive guide to understanding procrastination and practising behaviour change.">
+  <title>How to Manipulate Your Brain for Good</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#today" aria-label="Go to Today">
+        <span class="brand-mark">◎</span>
+        <span><strong>FOR GOOD.</strong><small>THE START SYSTEM</small></span>
+      </a>
+      <nav id="side-nav" class="nav-list">
+        <button class="nav-item active" data-page="today"><span>⌂</span>Today</button>
+        <button class="nav-item" data-page="learn"><span>▤</span>Learn</button>
+        <button class="nav-item" data-page="patterns"><span>◉</span>My Patterns</button>
+        <button class="nav-item" data-page="lab"><span>⚒</span>Action Lab</button>
+        <button class="nav-item" data-page="practice"><span>✓</span>Practice</button>
+        <button class="nav-item" data-page="evidence"><span>⌕</span>Evidence</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <span class="status-dot"></span><span id="connection-label">Ready to work offline</span>
+        <button id="theme-toggle" class="quiet-button">Switch to light theme</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">◎</span><strong>FOR GOOD.</strong></div>
+        <div class="topbar-note">A calmer way to make progress.</div>
+        <button id="quick-rescue-top" class="button button-small button-outline">Quick Rescue ↗</button>
+      </header>
+      <div id="app" class="page-wrap" tabindex="-1"></div>
+      <footer class="footer">
+        <span>HOW TO MANIPULATE YOUR BRAIN FOR GOOD.</span>
+        <span>Understand the mechanism. Practise a better response.</span>
+      </footer>
+    </main>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <button class="active" data-page="today"><span>⌂</span><small>Today</small></button>
+    <button data-page="learn"><span>▤</span><small>Learn</small></button>
+    <button data-page="lab"><span>⚒</span><small>Action Lab</small></button>
+    <button data-page="practice"><span>✓</span><small>Practice</small></button>
+    <button data-page="evidence"><span>⌕</span><small>Evidence</small></button>
+  </nav>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
